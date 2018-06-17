@@ -99,10 +99,10 @@ Many thanks to dodgepong at obsproject.com for the following:
 `./configure --with-http_ssl_module --add-module=../nginx-rtmp-module-master`<br>
 `make`<br>
 `sudo make install`<br><br>
-Setup nginx to start when the Raspberry Pi does:
+**Setup nginx to start when the Raspberry Pi does:**
 * Enter rc.local: `sudo nano /etc/rc.local`
-* Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &` and save/exit.
- DONE! Now, some commands:
+* Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &` and save/exit.<br><br>
+**DONE! Now, some commands:**
  * Start server: `sudo /usr/local/nginx/sbin/nginx`
  * Stop server:  `sudo /usr/local/nginx/sbin/nginx -s stop`
  
