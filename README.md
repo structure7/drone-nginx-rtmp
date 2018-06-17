@@ -111,10 +111,11 @@ Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](ht
 
 * Go to root directory, then: `wget --no-check-certificate  https://bitbucket.org/api/2.0/snippets/scargill/ekon6o/master/files/script.sh`
 * `sudo bash script.sh`<br>
+**WARNING:** The above script and it's installation may required some internet searchery and meddling.
 
 ### Get Blynk notification on restart
 
 * Add `curl -X POST -H "Content-Type: application/json" -d '{"body":"Sweet fancy Moses!"}' http://blynk-cloud.com/BLYNK_AUTH_TOKEN/notify` to `/etc/rc.local`
-**WARNING:** The above script and it's installation may required some internet searchery and meddling.
+
 
 
