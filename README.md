@@ -85,6 +85,26 @@ Amazing!  We are connected remotely to the RasPi and we no longer need the dedic
 * Plug the power cable back in and the RasPi should be on its way back up without all of those extra cables!
 * After giving the RasPi a minute or so to boot, connect to it once again using the Windows Remote Desktop program.
 
+### Install nginx with an RTMP module
+Many thanks to dodgepong at obsproject.com for the following:
 
+* Install dependencies: `sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev`
+* Download nginx code: `wget http://nginx.org/download/nginx-1.15.0.tar.gz` (Protip: Check [check here](http://nginx.org/en/download.html) for the current nginx version.
+* Get RTMP module code from git: `https://github.com/arut/nginx-rtmp-module/archive/master.zip`
+* Unpack, unzip, and enter the directory:<br>
+`tar -zxvf nginx-1.13.1.tar.gz`<br>
+`unzip master.zip`<br>
+`cd nginx-1.13.1` 
+* Build nginx:<br>
+`./configure --with-http_ssl_module --add-module=../nginx-rtmp-module-master`<br>
+`make`<br>
+`sudo make install`<br><br>
+Setup nginx to start when the Raspberry Pi does:
+* Enter rc.local: `sudo nano /etc/rc.local`
+* Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &` and save/exit.
+ DONE! Now, some commands:
+ * Start server: `sudo /usr/local/nginx/sbin/nginx`
+ * Stop server:  `sudo /usr/local/nginx/sbin/nginx -s stop`
+ 
 
 ###### *Portions of the above was copied from [here](http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi). All credit and many thanks to Dave Johnson ([@thisDaveJ](https://twitter.com/thisDaveJ)).*
