@@ -86,7 +86,7 @@ Amazing!  We are connected remotely to the RasPi and we no longer need the dedic
 * After giving the RasPi a minute or so to boot, connect to it once again using the Windows Remote Desktop program.
 
 ### Install nginx with an RTMP module
-Many thanks to dodgepong at obsproject.com for the following:
+Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) at [obsproject.com](https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/) for the following:
 
 * Install dependencies: `sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev`
 * Download nginx code: `wget http://nginx.org/download/nginx-1.15.0.tar.gz` (Protip: Check [check here](http://nginx.org/en/download.html) for the current nginx version.
@@ -106,5 +106,3 @@ Many thanks to dodgepong at obsproject.com for the following:
  * Start server: `sudo /usr/local/nginx/sbin/nginx`
  * Stop server:  `sudo /usr/local/nginx/sbin/nginx -s stop`
  
-
-###### *Portions of the above was copied from [here](http://thisdavej.com/beginners-guide-to-installing-node-js-on-a-raspberry-pi). All credit and many thanks to Dave Johnson ([@thisDaveJ](https://twitter.com/thisDaveJ)).*
