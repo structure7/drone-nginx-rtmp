@@ -105,13 +105,6 @@ Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) 
 **DONE! Now, some commands:**
  * Start server: `sudo /usr/local/nginx/sbin/nginx`
  * Stop server:  `sudo /usr/local/nginx/sbin/nginx -s stop`
- 
-### Install stuff with "The Script"
-Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](https://tech.scargill.net/the-script/):
-
-* Go to root directory, then: `wget --no-check-certificate  https://bitbucket.org/api/2.0/snippets/scargill/ekon6o/master/files/script.sh`
-* `sudo bash script.sh`<br>
-**WARNING:** The above script and it's installation may required some internet searchery and meddling.
 
 ### Get Blynk notification on restart
 
@@ -125,5 +118,9 @@ Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](ht
 * Add:<br>
 `sudo /bin/nginx-notify.sh &`
 
+### Install stuff with "The Script"
+Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](https://tech.scargill.net/the-script/):
 
-
+* Go to root directory, then: `wget --no-check-certificate  https://bitbucket.org/api/2.0/snippets/scargill/ekon6o/master/files/script.sh`
+* `sudo bash script.sh`<br>
+**WARNING:** The above script and it's installation may required some internet searchery and meddling.
