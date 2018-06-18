@@ -117,10 +117,10 @@ Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](ht
 
 * `sudo nano /bin/nginx-notify.sh` and paste:<br>
 `#!/bin/bash`<br><br>
-`sleep 30`
+`sleep 30`<br>
 `curl -X POST -H "Content-Type: application/json" -d '{"body":"Phx RTMP server has been reset."}' http://blynk-cloud.com/BLYNK_TOKEN/notify`
-
-* Add `curl -X POST -H "Content-Type: application/json" -d '{"body":"Sweet fancy Moses!"}' http://blynk-cloud.com/BLYNK_AUTH_TOKEN/notify` to `/etc/rc.local`
+* `sudo nano /etc/rc.local` and add:<br>
+`sudo /bin/nginx-notify.sh &`
 
 
 
