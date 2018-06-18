@@ -121,7 +121,7 @@ Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](ht
 `sleep 30`<br>
 `curl -X POST -H "Content-Type: application/json" -d '{"body":"Phx RTMP server has been reset."}' http://blynk-cloud.com/BLYNK_TOKEN/notify`<br>
 * Open rc.local: `sudo nano /etc/rc.local`<br>
-Add:<br>
+* Add:<br>
 `sudo /bin/nginx-notify.sh &`
 
 
