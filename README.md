@@ -102,9 +102,26 @@ Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) 
 **Setup nginx to start when the Raspberry Pi does:**
 * Enter rc.local: `sudo nano /etc/rc.local`
 * Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &` and save/exit.<br><br>
+**Configure nginx**
+* Enter nginx.conf: `sudo nano /usr/local/nginx/conf/nginx.conf`
+* Append with:
+`rtmp {
+        server {
+                listen 1935;
+                chunk_size 4096;
+
+                application live {
+                        live on;
+                        record off;
+                }
+        }
+}`
+
 **DONE! Now, some commands:**
  * Start server: `sudo /usr/local/nginx/sbin/nginx`
  * Stop server:  `sudo /usr/local/nginx/sbin/nginx -s stop`
+
+
 
 ### Get Blynk notification on restart
 
