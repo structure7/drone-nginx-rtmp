@@ -102,7 +102,7 @@ Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) 
 **Setup nginx to start when the Raspberry Pi does:**
 * Enter rc.local: `sudo nano /etc/rc.local`
 * Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &` and save/exit.<br><br>
-**Configure nginx**
+**Configure nginx:**
 * Enter nginx.conf: `sudo nano /usr/local/nginx/conf/nginx.conf`
 * Append with:
 ```
@@ -126,7 +126,6 @@ rtmp {
 
 
 ### Get Blynk notification on restart
-
 * Create a notification script: `sudo nano /bin/nginx-notify.sh`
 * Paste:<br>
 ```
@@ -136,12 +135,22 @@ curl -X POST -H "Content-Type: application/json" -d '{"body":"Phx RTMP server ha
 ```
 * Change persmissions: `sudo chmod u+x /bin/nginx-notify.sh`
 * Open rc.local: `sudo nano /etc/rc.local`<br>
-* Add:<br>
-`sudo /bin/nginx-notify.sh &`
+* Add: `sudo /bin/nginx-notify.sh &`
 
-### Install stuff with "The Script"
+### Install stuff with "The Script" (very optional)
 Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](https://tech.scargill.net/the-script/):
 
 * Go to root directory, then: `wget --no-check-certificate  https://bitbucket.org/api/2.0/snippets/scargill/ekon6o/master/files/script.sh`
 * `sudo bash script.sh`<br>
 **WARNING:** The above script and it's installation may required some internet searchery and meddling.
+
+### Watch your stream
+* Download ffplay.exe from [here](https://ffmpeg.org/).
+* Create a folder containing ffplay.exe and create a .bat file with the following:
+```
+ffplay.exe -fflags nobuffer rtmp://ip_accress/live/drone1 -loglevel verbose
+```
+or to steam with no audio:
+```
+ffplay.exe -fflags nobuffer -an rtmp://ip_accress/live/drone1 -loglevel verbose
+```
