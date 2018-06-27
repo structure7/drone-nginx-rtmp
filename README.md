@@ -148,9 +148,10 @@ Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](ht
 * Download ffplay.exe from [here](https://ffmpeg.org/).
 * Create a folder containing ffplay.exe and create a .bat file with the following:
 ```
-ffplay.exe -fflags nobuffer rtmp://ip_accress/live/drone1 -loglevel verbose
+ffplay.exe -fflags nobuffer rtmp://ip_address/live/drone1 -loglevel verbose
 ```
 or to steam with no audio:
 ```
-ffplay.exe -fflags nobuffer -an rtmp://ip_accress/live/drone1 -loglevel verbose
+ffplay.exe -fflags nobuffer -an rtmp://ip_address/live/drone1 -loglevel verbose
 ```
+Open the .bat file to watch the stream!
