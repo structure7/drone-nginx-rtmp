@@ -105,7 +105,8 @@ Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) 
 **Configure nginx**
 * Enter nginx.conf: `sudo nano /usr/local/nginx/conf/nginx.conf`
 * Append with:
-`rtmp {
+```
+rtmp {
         server {
                 listen 1935;
                 chunk_size 4096;
@@ -115,7 +116,8 @@ Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) 
                         record off;
                 }
         }
-}`
+}
+```
 
 **DONE! Now, some commands:**
  * Start server: `sudo /usr/local/nginx/sbin/nginx`
