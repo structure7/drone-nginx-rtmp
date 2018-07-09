@@ -57,7 +57,7 @@ We want to run our RasPi remotely without requiring a dedicated HDMI monitor and
 The “-y” option will automatically answer yes to the default questions which is what we want in this context.
 * Next, invoke the following command to install xrdp:
 <br>`$ sudo apt install -y xrdp`<br>
-* Finally, we need to install the samba package so we will be able to access the RasPi by its host name from Windows machines on the network rather than by it’s IP address which can change since the RasPi receives its IP address via DHCP.  (For OS X users, you can install Bonjour and then access your Raspberry Pi by host name.  For example, if your host name is “raspi”, you can access it on OS X as “raspi.local”.)  OK, let’s install Samba:
+* Finally, we need to install the samba package so we will be able to access the RasPi by its host name from Windows machines on the network rather than by its IP address which can change since the RasPi receives its IP address via DHCP.  (For OS X users, you can install Bonjour and then access your Raspberry Pi by host name.  For example, if your host name is “raspi”, you can access it on OS X as “raspi.local”.)  OK, let’s install Samba:
 <br>`$ sudo apt install -y samba`<br>
 * After this installation completes, you should be able to ping the RasPi Hostname (configured in Raspberry Pi Configuration program above) from a Windows machine:
 <br>`C:\> ping raspi`<br>
@@ -142,7 +142,7 @@ Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](ht
 
 * Go to root directory, then: `wget --no-check-certificate  https://bitbucket.org/api/2.0/snippets/scargill/ekon6o/master/files/script.sh`
 * `sudo bash script.sh`<br>
-**WARNING:** The above script and it's installation may required some internet searchery and meddling.
+**WARNING:** The above script and its installation may require some internet searchery and meddling.
 
 ### Install other stuff
 Just some notes of things I'm installing or messing around with:
