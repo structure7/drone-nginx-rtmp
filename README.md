@@ -144,6 +144,11 @@ Long live [Pete Scargill](https://tech.scargill.net/). Long live [The Script](ht
 * `sudo bash script.sh`<br>
 **WARNING:** The above script and it's installation may required some internet searchery and meddling.
 
+### Install other stuff
+Just some notes of things I'm installing or messing around with:
+
+* Install bmon for simple network activity monitoring: ```sudo apt-get install bmon```
+
 ### Watch your stream
 * Download ffplay.exe from [here](https://ffmpeg.org/).
 * Create a folder containing ffplay.exe and create a .bat file with the following:
