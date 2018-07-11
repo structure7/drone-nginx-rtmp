@@ -172,8 +172,8 @@ start "Drone Streamer" cmd /c "Support Files/drone1-stream.bat"
 pause
 ```
 * In the newly created folder, create another folder called Support Files.
-** Copy in ffmpeg.exe, ffplay.exe, and the overlay file (transparent png).
-** Create drone1-stream.bat:
+* Copy in ffmpeg.exe, ffplay.exe, and the overlay file (transparent png).
+* Create drone1-stream.bat:
 ```
 "Support Files/ffplay.exe" -fflags nobuffer -an rtmp://ip_address/live/watch -loglevel verbose
 
