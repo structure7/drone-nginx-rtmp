@@ -149,14 +149,34 @@ Just some notes of things I'm installing or messing around with:
 
 * Install bmon for simple network activity monitoring: ```sudo apt-get install bmon```
 
-### Watch your stream
-* Download ffplay.exe from [here](https://ffmpeg.org/).
+### Watch your stream without overlay
+* Download ffplay.exe from [here](https://ffmpeg.org/) (part of the ffmpeg package).
 * Create a folder containing ffplay.exe and create a .bat file with the following:
 ```
 ffplay.exe -fflags nobuffer rtmp://ip_address/live/drone1 -loglevel verbose
 ```
-or to steam with no audio:
+* To remove audio add `-an` after `nobuffer`
 ```
 ffplay.exe -fflags nobuffer -an rtmp://ip_address/live/drone1 -loglevel verbose
 ```
 Open the .bat file to watch the stream!
+
+### Watch your stream with overlay
+* Download the ffmpeg package from [here](https://ffmpeg.org/).
+* Create a new folder containing a projectname-drone1-stream.bat file:
+```
+start "Drone Streamer" cmd /c "Support Files/drone1-stream.bat"
+
+"Support Files/ffmpeg.exe" -fflags "+genpts" -avoid_negative_ts "make_zero" -i rtmp://ip_address/live/drone1 -i "Support Files/720p-Holder-logo-overlay.png" -filter_complex "overlay=0:0" -q:v 2 -f flv rtmp://ip_address/live/watch
+
+pause
+```
+* In the newly created folder, create another folder called Support Files.
+** Copy in ffmpeg.exe, ffplay.exe, and the overlay file (transparent png).
+** Create drone1-stream.bat:
+```
+"Support Files/ffplay.exe" -fflags nobuffer -an rtmp://ip_address/live/watch -loglevel verbose
+
+pause
+```
+Open the projectname-drone1-stream bat file to watch the stream!
