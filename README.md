@@ -105,7 +105,7 @@ Note: The OBS website guide changed their RTMP module source to `https://github.
 * Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &` and save/exit.<br><br>
 **Configure nginx:**
 * Enter nginx.conf: `sudo nano /usr/local/nginx/conf/nginx.conf`
-* Append with:
+* Append with (at the very end... AFTER the last curly bracket, not before):
 ```
 rtmp {
         server {
