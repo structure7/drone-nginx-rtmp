@@ -90,7 +90,7 @@ Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) 
 
 * Install dependencies: `sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev`
 * Download nginx code: `wget http://nginx.org/download/nginx-1.15.0.tar.gz` (Protip: Check [check here](http://nginx.org/en/download.html) for the current nginx version.
-* Get RTMP module code from git: `https://github.com/arut/nginx-rtmp-module/archive/master.zip`
+* Get RTMP module code from git: `wget https://github.com/arut/nginx-rtmp-module/archive/master.zip`
 * Unpack, unzip, and enter the directory:<br>
 `tar -zxvf nginx-1.13.1.tar.gz`<br>
 `unzip master.zip`<br>
