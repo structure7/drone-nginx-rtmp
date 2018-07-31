@@ -47,8 +47,8 @@ We’re now ready to move on and ensure our system is up to date with security p
 
 ### Uninstall the Unwanted
 Unless you plan on using Wolfram or LibreOffice:
-<br>`$ sudo apt-get -y purge wolfram-engine && sudo apt-get -y clean && sudo apt-get -y autoremove`<br>
-<br>`$ sudo apt-get -y remove --purge libreoffice* && sudo apt-get -y clean && sudo apt-get -y autoremove`<br>
+<br>`$ sudo apt-get purge -y wolfram-engine && sudo apt-get -y clean && sudo apt-get -y autoremove`<br>
+<br>`$ sudo apt-get remove --purge -y libreoffice* && sudo apt-get -y clean && sudo apt-get -y autoremove`<br>
 
 ### Apply Raspbian Updates
 We will first run the apt “update” command.  This command will not actually update any software on the system, but will download the latest package lists from the software repositories so that Raspbian will be aware of all new software available along with dependencies.  Issue the following command at the “$” prompt:
