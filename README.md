@@ -45,6 +45,11 @@ After the RasPi reboots, we are ready to get Wi-Fi up and running to get on the 
 
 We’re now ready to move on and ensure our system is up to date with security patches.
 
+### Uninstall the Unwanted
+Unless you plan on using Wolfram or LibreOffice:
+<br>`$ sudo apt-get purge wolfram-engine && sudo apt-get clean && sudo apt-get autoremove`<br>
+<br>`$ sudo apt-get remove --purge libreoffice* && sudo apt-get clean && sudo apt-get autoremove`<br>
+
 ### Apply Raspbian Updates
 We will first run the apt “update” command.  This command will not actually update any software on the system, but will download the latest package lists from the software repositories so that Raspbian will be aware of all new software available along with dependencies.  Issue the following command at the “$” prompt:
 <br>`$ sudo apt update && sudo apt full-upgrade`<br>
