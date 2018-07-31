@@ -124,6 +124,9 @@ rtmp {
         }
 }
 ```
+**Customize nginx's index.html:**
+* Just in case someone stumbles upon it: `sudo nano /usr/local/nginx/html/index.html`
+* Copy and past from another source as needed.
 
 **DONE! Now, some commands:**
  * Start server: `sudo /usr/local/nginx/sbin/nginx`
