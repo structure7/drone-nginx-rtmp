@@ -146,7 +146,7 @@ rtmp {
 
 	</br>
 	
-	<h3 style="text-align: center;">This is Project ABC's drone streaming server (raspi-ncg).</h3>
+	<h3 style="text-align: center;">This is Project ABC's drone streaming server (raspi-abc).</h3>
 	<p>It's used by ABC associates as part of the Drone Services Program. If you have any questions, please contact Rod Johnson at 555-555-5555.</p>
 	<p><a href="https://a.box.link" target="_blank" rel="noopener">Click here</a> for directions on how to use this hardware with your drone.</p>
 	<p><a href="https://another.box.link" target="_blank" rel="noopener">Click here</a> for more information about ABC's Drone Services Program.</p>
