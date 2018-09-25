@@ -126,7 +126,36 @@ rtmp {
 ```
 **Customize nginx's index.html:**
 * Just in case someone stumbles upon it: `sudo nano /usr/local/nginx/html/index.html`
-* Copy and past from another source as needed.
+* Copy and past from another source as needed. I usually do something like:
+```
+<html>
+	<head>
+	<title>raspi-abc</title> 
+
+<style>
+	body {
+		width: 35em;
+		margin: 0 auto;
+		font-family: Tahoma, Verdana, Arial, sans-serif;
+	}
+</style>
+
+</head>
+
+<body>
+
+	</br>
+	
+	<h3 style="text-align: center;">This is Project ABC's drone streaming server (raspi-ncg).</h3>
+	<p>It's used by ABC associates as part of the Drone Services Program. If you have any questions, please contact Rod Johnson at 555-555-5555.</p>
+	<p><a href="https://a.box.link" target="_blank" rel="noopener">Click here</a> for directions on how to use this hardware with your drone.</p>
+	<p><a href="https://another.box.link" target="_blank" rel="noopener">Click here</a> for more information about ABC's Drone Services Program.</p>
+	<p><img style="border-width: 0px;" src="/a-picture.jpg" alt="Trent Reznor flies at Project Peanut" width="600" height="400" /></p>
+
+</body>
+
+</html>
+```
 
 **DONE! Now, some commands:**
  * Start server: `sudo /usr/local/nginx/sbin/nginx`
