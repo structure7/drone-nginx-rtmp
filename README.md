@@ -187,6 +187,7 @@ Just some notes of things I'm installing or messing around with:
 
 * Install bmon for simple network activity monitoring: ```sudo apt-get install bmon```
 * Use this command to keep an eye on temps: ```watch -n 2 /opt/vc/bin/vcgencmd measure_temp```
+* Install TeamViewer: https://www.techrrival.com/install-teamviewer-raspberry-pi/
 
 ### Watch your stream without overlay
 * Download ffplay.exe from [here](https://ffmpeg.org/) (part of the ffmpeg package).
