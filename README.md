@@ -107,7 +107,7 @@ Note: The OBS website guide changed their RTMP module source to `https://github.
 `sudo make install`<br><br>
 **Setup nginx to start when the Raspberry Pi does:**
 * Enter rc.local: `sudo nano /etc/rc.local`
-* Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &`<br><br>
+* Before the last (exit) line, add: `sudo /usr/local/nginx/sbin/nginx &`<br><br> (& symbol allows this to run only once)
 **Configure nginx:**
 * Enter nginx.conf: `sudo nano /usr/local/nginx/conf/nginx.conf`
 * Append with (at the very end... AFTER the last curly bracket, not before):
