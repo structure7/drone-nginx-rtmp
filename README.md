@@ -94,13 +94,13 @@ Amazing!  We are connected remotely to the RasPi and we no longer need the dedic
 Many thanks to [dodgepong](https://obsproject.com/forum/members/dodgepong.456/) at [obsproject.com](https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/) for the following:
 
 * Install dependencies: `sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev`
-* Download nginx code: `wget http://nginx.org/download/nginx-1.15.1.tar.gz` (Protip: Check [here](http://nginx.org/en/download.html) for the current nginx version.
+* Download nginx code: `wget http://nginx.org/download/nginx-1.16.0.tar.gz` (Protip: Check [here](http://nginx.org/en/download.html) for the current nginx version.
 * Get RTMP module code from git: `wget https://github.com/arut/nginx-rtmp-module/archive/master.zip`<br>
 Note: The OBS website guide changed their RTMP module source to `https://github.com/sergey-dryabzhinsky/nginx-rtmp-module/archive/dev.zip`, a fork of [arut's project](https://github.com/arut/nginx-rtmp-module). Not sure why yet.
 * Unpack, unzip, and enter the directory:<br>
-`tar -zxvf nginx-1.15.1.tar.gz`<br>
+`tar -zxvf nginx-1.16.0.tar.gz`<br>
 `unzip master.zip`<br>
-`cd nginx-1.15.1` 
+`cd nginx-1.16.0` 
 * Build nginx:<br>
 `./configure --with-http_ssl_module --add-module=../nginx-rtmp-module-master`<br>
 `make`<br>
